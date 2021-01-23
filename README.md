@@ -5,9 +5,9 @@ Automatically create release notes in MadCap Flare format from a Jira query
 
 The script requires __Curl__, __Java__ and __Saxon__. __Curl__ should already be installed as part of your OS unless you are using a version of Windows earlier than Windows 10. You can get __Java__ from https://java.com/ and you can get __Saxon__ from http://saxon.sourceforge.net/.
 
-The script expects a Jira custom field with the name "Release Notes". You can edit the XSL to change the information that is pulled from the Jira XML and how it is formatted.
+The script expects a Jira custom field with the name `Release Notes`. You can edit the XSL to change the information that is pulled from the Jira XML and how it is formatted.
 
-Download the contents of this repository and make sure Saxon is in the Java CLASSPATH.
+Download the contents of this repository and make sure Saxon is in the Java `CLASSPATH` environment variable.
 
 ## Get a Jira API key.
 
@@ -21,7 +21,7 @@ __Warning__: You should only use this API key within your script. The script sho
 
 ## Get the Jira query
 
-1. In Jira, run the search that returns the release notes for the release version. This is typically filtered by a fixVersion. Take note of the fixVersion string.
+1. In Jira, run the search that returns the release notes for the release version. This is typically filtered by a `fixVersion`. Take note of the `fixVersion` string.
 2. From the __Export__ menu, right-click __Export XML__ and click __Copy link address__ then paste the result into a text editor.
 
 ## Modify the script
@@ -40,7 +40,7 @@ __Warning__: You should only use this API key within your script. The script sho
 In Windows if you have not defined your class path you can copy the script into the Saxon folder and run it there.
 
 1. From the command line, enter `./j2f.sh` or `j2f` (Windows).
-2. Enter the fixversion.
+2. Enter the `fixVersion`.
 
 The script uses __Curl__ to download the results of your Jira search as an XML file called `input.xml`. It then uses __Saxon__ to run the XSLT transform to create an `output.html` file in MadCap Flare format. You can modify which information is included in the output file by modifying the `j2f.xsl` file.
 
