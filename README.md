@@ -1,5 +1,5 @@
 # Jira2Flare
-Automatically create release notes in MadCap Flare format from a Jira query
+Automatically create release notes in MadCap Flare format from a Jira query.
 
 ## Pre-requisites
 
