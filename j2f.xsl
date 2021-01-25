@@ -47,7 +47,7 @@ Note: The example script takes the fix version as an input parameter.
         <xsl:if test="customfieldname[text()='Release Notes']">
       <tr>
        	<td><xsl:value-of select="../customfield/customfieldname[text()='Modules']/../customfieldvalues/customfieldvalue"/>&#160;</td>
-      	<td><xsl:value-of select="customfieldvalues/customfieldvalue"/>&#160;</td>
+      	<td><xsl:value-of select="customfieldvalues/customfieldvalue" disable-output-escaping="yes"/>&#160;</td>
        	<td><xsl:value-of select="../../key"/>&#160;</td>
        	<td><xsl:value-of select="../customfield/customfieldname[text()='Category']/../customfieldvalues/customfieldvalue"/>&#160;</td>
        	<td><xsl:value-of select="../../fixVersion"/>&#160;</td>
